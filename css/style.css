@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #d3ee06;
+  box-sizing: border-box; }
+
+.clipboard-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+input {
+  border: none; }
+
+.text {
+  font-size: 1rem;
+  color: #222;
+  padding: 0.7rem 1.6rem; }
+
+.cta-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+  border-left: 4px solid #96ee2a;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s; }
+  .cta-btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s; }
+
+.cta-btn--resume {
+  color: #222;
+  background-color: #fff; }
+  .cta-btn--resume::after {
+    background: #96ee2a; }
+  .cta-btn--resume:hover {
+    color: #222;
+    text-decoration: none;
+    cursor: pointer; }
+    .cta-btn--resume:hover::after {
+      width: 100%; }
